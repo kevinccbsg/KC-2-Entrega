@@ -158,10 +158,10 @@
 		</section>
 		<section id="experience">
 			<div class="row">
-					<div class="col-12">
-						<h2  class="section-titles">Experience</h2>
-					</div>
+				<div class="col-12">
+					<h2  class="section-titles">Experience</h2>
 				</div>
+			</div>
 			<div class="row">
 				<div class="col-12">
 					<article>
@@ -205,6 +205,11 @@
 		<section id="hobbies" class="section-fully-container">
 			<div class="container">
 				<div class="row">
+					<div class="row">
+						<div class="col-12">
+							<h2  class="section-titles">Studies</h2>
+						</div>
+					</div>
 					<div class="flex-container">
 						<div class="flex-item">
 							<div class="box">
@@ -248,7 +253,46 @@
 		</section>
 		
 		<section id="contact">
-			
+			<div class="row">
+				<div class="col-12">
+					<h2  class="section-titles">Contact</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<form id="contact-form" action="GET">
+						<div class="form-control">
+							<label for="contact-name">Name</label>
+							<input type="text" id="contact-name" placeholder="name" required>
+						</div>
+						<div class="form-control">
+							<label for="contact-email">email</label>
+							<input type="mail" id="contact-email" placeholder="email" required>
+						</div>
+						<div class="form-control">
+							<span>How did you hear about me?</span>
+							<label for="monobo">We worked togueter in MONOBO.</label>
+							<input type="radio" id="monobo" name="how_know" value="monobo" required>
+							<label for="oldFriend">I'm an old friend.</label>
+							<input type="radio" id="oldFriend" name="how_know" value="oldFriend" required>
+							<label for="github">I saw your GitHub projetcs.</label>
+							<input type="radio" id="github" name="how_know" value="github" required>
+							<label for="other">Other</label>
+							<input type="radio" id="other" name="how_know" value="other" required>
+							<input type="text" id="other" name="other" placeholder="Specify where and how">
+						</div>
+						<div class="form-control">
+							<label for="contact-number">Telephone number</label>
+							<input type="tel" name="contact-number" id="contact-number" maxlength="12" required>
+						</div>
+						<div class="form-control">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" cols="30" rows="10" maxlength="150"></textarea>
+						</div>
+						<button type="submit" class="submit-button">Enviar</button>
+					</form>
+				</div>
+			</div>
 		</section>
 
 	</div>
