@@ -3,13 +3,10 @@
 	height: 12px;
     position: relative;
     margin: 10px 0;
-    background: rgb(178, 178, 178);
+    background: rgb(230, 230, 230);
     -moz-border-radius: 25px;
     -webkit-border-radius: 25px;
     border-radius: 25px;
-    -webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
-    -moz-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
-    box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3); 
 }
 .skills-list .bar > span {
 	display: block;
@@ -27,7 +24,7 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     background-color: #FFF;
-    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgba(0,0,0,0.4)), color-stop(1, #212121) );
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, #212121), color-stop(1, #212121) );
     background-image: -moz-linear-gradient( center bottom, #FFF 37%, #FFF 69% );
     -webkit-box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4);
     -moz-box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4);
@@ -75,8 +72,10 @@
 	max-width: 35%;
 }
 .skill-text {
-	color: #212121;
+	color: #F5F5F5;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 .section-fully-container h2 {
-	color: #212121;
+	color: #F5F5F5;
 }

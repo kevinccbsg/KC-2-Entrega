@@ -38,7 +38,11 @@ p {
 	text-align: right;
 }
 .section-fully-container {
-	background-color:rgb(243, 243, 243);
+	background-image: url(../images/skills4.jpeg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
 	color: #F5F5F5;
 	margin-right: calc(-50vw + 50%);
 	margin-left: calc(-50vw + 50%);
