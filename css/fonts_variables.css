@@ -17,3 +17,11 @@
 	font-weight: 700;
 	font-size: 1.5rem;
 }
+
+.section-subtitles {
+	font-family: 'Montserrat', sans-serif;
+	color: #212121;
+	font-weight: 700;
+	font-size: 1rem;
+	margin-top: 15px;
+}

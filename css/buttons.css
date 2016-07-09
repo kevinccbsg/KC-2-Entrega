@@ -1,3 +1,10 @@
+.button-container {
+    position: relative;
+    text-align: left;
+    margin: 10px 0;
+    height: 40px;
+    max-height: 40px;
+}
 .btn {
     position: absolute;
     top: 0;
@@ -12,13 +19,7 @@
 .btn-default-solid {
     color: #FFF;
     background-color: #727272;
-}
-.button-container {
-    position: relative;
-    text-align: left;
-    margin: 10px 0;
-    height: 40px;
-    max-height: 40px;
+    border: none;
 }
 .btn-default-solid:hover {
     color: #727272;
