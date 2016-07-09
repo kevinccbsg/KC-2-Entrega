@@ -10,13 +10,14 @@
 @import url(experience.css);
 @import url(hobbies.css);
 @import url(contact.css);
+@import url(footer.css);
 /*
 main-text-color: #212121;
 secondary-text-color:#727272;
 icons-color:#212121;
 light-primary-color:#F5F5F5;
 rgba(0,0,0,0.5)
-accent-color:#00BCD4;
+accent-color:#8bc34a;
 */
 body {
 	font-family: 'Source Sans Pro', sans-serif;
@@ -59,8 +60,8 @@ p {
 }
 .header-title-center {
 	margin: 0 auto;
-    width: 575px;
-    padding-top: 45vh;
+    width: 520px;
+    padding-top: 20vh;
 	text-align: left;
 	line-height: 1.5;
 }

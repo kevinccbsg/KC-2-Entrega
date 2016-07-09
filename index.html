@@ -9,6 +9,9 @@
 	<meta name="description" content="This is a CV of Kevin Martinez Web Developer">
 	<meta name="classification" content="CV">
 	<title>Kevin Martínez Escobar | CV</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.css">
 	<link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300italic,300' rel='stylesheet' type='text/css'>
@@ -19,7 +22,7 @@
 	<div class="header">
 		<header>
 			<div class="header-title-center">
-				<h1 class="title">Kevin Julián Martínez Escobar</h1>
+				<h1 class="title">Kevin Martínez Escobar</h1>
 				<p class="job">Web developer</p>
 			</div>
 		</header>
@@ -28,7 +31,7 @@
 			<div class="navbar-center">
 				<ul class="navbar-list">
 					<li class="navbar-item">
-						<a href="#header">Inicio</a>
+						<a href="#header">Home</a>
 					</li>
 					<li class="navbar-item">
 						<a href="#about">About me</a>
@@ -57,15 +60,11 @@
 		
 		<section id="about" class="about-me">
 			<div class="row">
-				<div class="col-12">
-					<header>
-						<h2 class="section-titles">About me</h2>
-					</header>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-8">
+				<div class="col-8 border-divider">
 					<article>
+						<header>
+							<h2 class="section-titles">About me</h2>
+						</header>
 						<section>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus debitis id quae commodi, expedita minima blanditiis vel numquam sapiente. <span>Porro</span> vel dicta aliquid iure, maxime impedit possimus quam omnis ad.</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus <span>debitis id quae commodi, expedita minima blanditiis vel numquam sapiente</span>. Porro vel dicta aliquid iure, maxime impedit possimus quam omnis ad.</p>
@@ -77,11 +76,35 @@
 					</article>
 				</div>
 				<div class="col-4">
-					<div class="img-container">
-						<figure class="profile-photo">
-							<img src="https://www.gravatar.com/avatar/ce40d295152bf58edea5a7dfa43fda02?s=200" alt="Kevin avatar">
-						</figure>
-					</div>
+					<article>
+						<header>
+							<h2 class="section-titles">Personal detail</h2>
+						</header>
+						<div class="row">
+						<!--<div class="img-container">
+							<figure class="profile-photo">
+								<img src="https://www.gravatar.com/avatar/ce40d295152bf58edea5a7dfa43fda02?s=200" alt="Kevin avatar">
+							</figure>
+						</div>-->
+							<ul class="personal-information">
+								<li class="personal-item">
+									<span>Name: </span>Kevin Julián Martínez Escobar
+								</li>
+								<li class="personal-item">
+									<span>Nationality: </span>Spanish, Colombian
+								</li>
+								<li class="personal-item">
+									<span>Address: </span>San Dacio Street Nª 23 5 IZQ
+								</li>
+								<li class="personal-item">
+									<span>Phone: </span>622 042 906
+								</li>
+								<li class="personal-item">
+									<span>Email: </span><a href="mailto:kevinccbsg@gmail.com">kevinccbsg@gmail.com</a>
+								</li>
+							</ul>
+						</div>
+					</article>
 				</div>
 			</div>
 			
@@ -98,16 +121,19 @@
 					<img src="images/UPM.jpg" alt="University">
 					<h3 class="section-subtitles">Politécnica de Madrid</h3>
 					<span>2011 – 2016</span>
+					<p>Industrial Electronic Engineering and Automatic</p>
 				</div>
 				<div class="col-4">
 					<img src="images/platzi.png" alt="Platzi">
 					<h3 class="section-subtitles">Platzi</h3>
 					<span>2015 – currently</span>
+					<p>Git and GitHub course<br>Javascript and Node.js Course</p>
 				</div>
 				<div class="col-4">
 					<img src="images/keepcoding.png" alt="Master">
 					<h3 class="section-subtitles">KeepCoding</h3>
 					<span>2016 – currently</span>
+					<p>Bootcamp Web Development Master</p>
 				</div>
 			</div>
 		</section>
@@ -238,7 +264,7 @@
 					<div class="box-overlay">
 						<h4 class="box-title">Play Music</h4>
 						<p>My favorite Hobbie is play with my band Go The Distance.</p>
-						<i class="fa"></i>
+						<i class="material-icons">&#xE038;</i>
 					</div>
 				</div>
 				<div class="box">
@@ -246,7 +272,7 @@
 					<div class="box-overlay">
 						<h4 class="box-title">Basketball</h4>
 						<p>I'm trainer of two Basketbal teams.</p>
-						<i class="fa"></i>
+						<i class="material-icons">&#xE038;</i>
 					</div>
 				</div>
 			</div>
@@ -267,7 +293,7 @@
 						</div>
 						<div class="form-control">
 							<label for="contact-email">Email</label>
-							<input type="mail" id="contact-email" placeholder="Email" required>
+							<input type="email" id="contact-email" placeholder="Email" required>
 						</div>
 						<div class="form-control">
 							<label for="contact-number">Telephone</label>
@@ -290,7 +316,7 @@
 							<div class="radio-button">
 								<input type="radio" id="other" name="how_know" value="other" required>
 								<label for="other">Other</label>
-								<input type="text" id="other" name="other" placeholder="Specify where and how">
+								<input type="text" id="other_text" name="other" placeholder="Specify where and how">
 							</div>
 						</div>
 						<div class="form-control">
@@ -308,10 +334,14 @@
 	</div>
 
 	<footer class="footer">
-		Kevin Julián Martínez Escobar &copy; 2016 KeepCoding.io
-		<a href=""><i class="fa"></i></a>
-		<a href=""><i class="fa"></i></a>
-		<a href=""><i class="fa"></i></a>
+		<div class="content-footer">
+			Kevin Julián Martínez Escobar &copy; 2016 KeepCoding.io
+			<div class="social-networks">
+				<a href="https://github.com/kevinccbsg"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+				<a href="mailto:kevinccbsg@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+				<a href="https://twitter.com/kajota93"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+			</div>
+		</div>
 	</footer>
 
 	<script src="js/main.js"></script>

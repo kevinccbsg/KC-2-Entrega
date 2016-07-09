@@ -1,0 +1,26 @@
+
+.footer {
+	position: relative;
+	text-align: center;
+	height: 100px;
+	max-height: 150px;
+	color: #F5F5F5;
+	background-color: #212121;
+}
+.content-footer {
+	padding-top: 35px;
+}
+.content-footer i.fa {
+	display: inline-table;
+	font-size: 28px;
+	padding: 0 10px;
+	color: #F5F5F5;
+	transition: color .2s linear;
+}
+.content-footer i.fa:hover {
+	color: #8bc34a;
+}
+.social-networks {
+	display: block;
+	padding: 5px;
+}

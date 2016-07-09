@@ -26,7 +26,7 @@
 	width: 100%;
 }
 .form .form-control input[type=text],
-.form .form-control input[type=mail],
+.form .form-control input[type=email],
 .form .form-control input[type=tel],
 .form .form-control textarea {
 	padding: 4px;
@@ -37,8 +37,11 @@
 	border-bottom-right-radius: 0px;
 }
 .form .form-control input[type=text]:focus,
-.form .form-control input[type=mail]:focus,
+.form .form-control input[type=email]:focus,
 .form .form-control input[type=tel]:focus,
 .form .form-control textarea:focus {
 	outline: none;
+}
+#other_text {
+	display: none;
 }

@@ -20,6 +20,7 @@
     color: #FFF;
     background-color: #8bc34a;
     border: none;
+    transition: background-color .2s linear;
 }
 .btn-default-solid:hover {
     color: #8bc34a;
@@ -31,6 +32,7 @@
     background-color: #FFF;
     color: #8bc34a;
     border: solid #8bc34a 1px;
+    transition: background-color .2s linear;
 }
 
 .btn-default:hover {

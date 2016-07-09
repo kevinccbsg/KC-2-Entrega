@@ -49,3 +49,6 @@
 	height: 300px;
 	opacity: 0;
 }
+.box-overlay i {
+	cursor: pointer;
+}
