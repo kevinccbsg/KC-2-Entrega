@@ -1,0 +1,44 @@
+
+.form {
+	padding: 0 100px;
+}
+.form .form-control {
+	padding: 10px;
+	display: inline-table;
+	width: 30%;
+}
+.form .form-control > label, .form .form-control .radio-button {
+	display: block;
+	padding: 10px 0;
+}
+.form .form-control > label, .form .form-control p {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+.form .form-control .radio-button > label {
+	display: inline-table;
+}
+.form-control:nth-child(4), .form-control:nth-child(5) {
+	display: block;
+	width: 100%;
+}
+.form-control textarea {
+	width: 100%;
+}
+.form .form-control input[type=text],
+.form .form-control input[type=mail],
+.form .form-control input[type=tel],
+.form .form-control textarea {
+	padding: 4px;
+	border-radius: 4px;
+	border: none;
+	border-bottom: 1px solid #212121;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.form .form-control input[type=text]:focus,
+.form .form-control input[type=mail]:focus,
+.form .form-control input[type=tel]:focus,
+.form .form-control textarea:focus {
+	outline: none;
+}

@@ -18,23 +18,23 @@
 }
 .btn-default-solid {
     color: #FFF;
-    background-color: #727272;
+    background-color: #8bc34a;
     border: none;
 }
 .btn-default-solid:hover {
-    color: #727272;
+    color: #8bc34a;
     background-color: #FFF;
-    border: solid #727272 1px;
+    border: solid #8bc34a 1px;
     text-decoration: none;
 }
 .btn-default {
     background-color: #FFF;
-    color: #727272;
-    border: solid #727272 1px;
+    color: #8bc34a;
+    border: solid #8bc34a 1px;
 }
 
 .btn-default:hover {
-    background-color: #727272;
+    background-color: #8bc34a;
     color: #FFF;
     text-decoration: none;
 }
