@@ -2,9 +2,11 @@
 @import url(grid.css);
 @import url(fonts_variables.css);
 @import url(buttons.css);
+@import url(animations.css);
 @import url(navbar.css);
 @import url(aboutme.css);
 @import url(studies.css);
+@import url(skills.css);
 /*
 main-text-color: #212121;
 secondary-text-color:#727272;

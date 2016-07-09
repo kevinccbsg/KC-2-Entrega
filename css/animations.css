@@ -1,0 +1,13 @@
+@keyframes increaseProgressBar {
+	0% {
+		width: 0%;
+		opacity: 0;
+	}
+	50%{
+		width: 50%
+		opacity: 1;
+	}
+	100%{
+		width: 100%;
+	}
+}
