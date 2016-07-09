@@ -1,0 +1,51 @@
+
+#hobbies img {
+	max-width: 100%;
+	height: auto;
+	max-height: 300px;
+}
+
+.flex-container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+.box {
+	position: relative;
+	max-height: 300px;
+	overflow: hidden;
+}
+.box:hover .box-overlay {
+	animation: upTextHobbie .5s forwards;
+}
+.box-overlay {
+	position: absolute;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+	align-items:center;
+	-webkit-box-align:center;
+	-webkit-align-items:center;
+	-ms-flex-align:center;
+	align-items:center;
+	color: #F5F5F5;
+	top: 300px;
+	width: 100%;
+	background-color: rgba(33, 33, 33, 0.81);
+	height: 300px;
+	opacity: 0;
+}
