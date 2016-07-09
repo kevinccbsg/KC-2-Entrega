@@ -26,7 +26,7 @@
 	padding: 20px;
 	color: #9E9E9E;
 	font-size: 1.2rem;
-	transition: color .5s linear;
+	transition: color .2s linear;
 }
 .navbar .navbar-list .navbar-item a:hover {
 	color: #F5F5F5;

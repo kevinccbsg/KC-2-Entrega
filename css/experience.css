@@ -1,0 +1,16 @@
+
+#experience .section-subtitles {
+	margin-bottom: 15px;
+	display: inline-table;
+}
+.working-date {
+	float: right;
+	font-style: italic;
+	padding: 15px;
+}
+.experience-list > li:before {
+	content: "\2022";
+}
+.experience-list > li {
+	padding: 10px 0 10px 25px;
+}
