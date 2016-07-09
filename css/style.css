@@ -1,2 +1,15 @@
 @import url(reset.css);
 @import url(grid.css);
+@import url(fonts_variables.css);
+/*
+main-text-color: #212121;
+secondary-text-color:#727272;
+icons-color:#212121;
+light-primary-color:#F5F5F5;
+rgba(0,0,0,0.5)
+*/
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	color: #212121;
+}

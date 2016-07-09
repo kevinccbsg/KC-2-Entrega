@@ -1,0 +1,17 @@
+
+.title {
+	font-family: 'Cabin', sans-serif;
+	font-weight: 700;
+	font-size: 2.5rem;
+}
+.job {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+}
+.section-titles {
+	font-family: 'Montserrat', sans-serif;
+	color: #212121;
+	font-weight: 700;
+	font-size: 1.5rem;
+}
