@@ -1,7 +1,9 @@
 @import url(reset.css);
 @import url(grid.css);
 @import url(fonts_variables.css);
+@import url(buttons.css);
 @import url(navbar.css);
+@import url(aboutme.css);
 /*
 main-text-color: #212121;
 secondary-text-color:#727272;
@@ -14,7 +16,17 @@ body {
 	font-weight: 400;
 	color: #212121;
 }
-
+section[id] {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+p {
+	font-size: 1rem;
+	line-height: 1.4;
+}
+.text-align-right {
+	text-align: right;
+}
 .header {
 	position: relative;
 	width: 100%;
