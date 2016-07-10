@@ -28,6 +28,7 @@
 .form .form-control input[type=text],
 .form .form-control input[type=email],
 .form .form-control input[type=tel],
+.form .form-control input[type=number],
 .form .form-control textarea {
 	padding: 4px;
 	border-radius: 4px;
@@ -39,9 +40,20 @@
 .form .form-control input[type=text]:focus,
 .form .form-control input[type=email]:focus,
 .form .form-control input[type=tel]:focus,
+.form .form-control input[type=number]:focus,
 .form .form-control textarea:focus {
 	outline: none;
 }
 #other_text {
 	display: none;
+}
+#error-message.block-content {
+	display: none;
+	width: 50%;
+}
+.text-error {
+	border:1px solid rgba(251, 43, 43, 0.84);
+	color: rgba(251, 43, 43, 0.84);
+    border-radius: 5px;
+    padding: 5px;
 }
