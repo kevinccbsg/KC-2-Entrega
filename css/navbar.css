@@ -28,6 +28,9 @@
 	font-size: 1.2rem;
 	transition: color .2s linear;
 }
+.navbar .navbar-list .navbar-item.active a {
+	color: #8bc34a;
+}
 .navbar .navbar-list .navbar-item a:hover {
 	color: #8bc34a;
 }
