@@ -11,27 +11,32 @@
 	background-color: #000;
 	background-color: rgba(0,0,0,0.4);
 }
+.modal .section-titles {
+	margin: 15px 0;
+}
 .modal-content {
 	background-color: #fefefe;
 	margin: auto;
 	padding: 20px;
 	border: 1px solid #888;
-	width: 80%;
+	width: 600px;
+	text-align: center;
 }
 .close {
 	color: #AAA;
 	float: right;
 	font-size: 28px;
+	margin-top: -5px;
 	font-weight: bold;
 }
 .close:hover,
 .close:focus {
-	color: #000;
+	color: #8bc34a;
 	text-decoration: none;
 	cursor: pointer;
 }
 .modal video {
-	width: 100%;
+	width: auto;
 	height: 300px;
 	max-height: 300px;
 }
