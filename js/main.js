@@ -21,6 +21,7 @@ function initialCompare (offset, about, navbar) {
 			'top': 0,
 			'background-color': 'rgba(0, 0, 0, 0.75)'
 		});
+		$('section[id]').addClass('fade-in');
 	}
 }
 function modernizAnimation(section) {
@@ -59,6 +60,7 @@ function modernizAnimation(section) {
 		$('html, body').animate({
 			scrollTop: targetToGo[0].offsetTop - 56
 		});
+		$('section[id]').addClass('fade-in');
 	});
 	$(document).on('scroll', function (ev) {
 		var scrollToCompare = $(window).scrollTop() + offsetScrollSpy;
@@ -93,8 +95,9 @@ function modernizAnimation(section) {
 				barStatus.addClass('animate');
 			}
 			else {
+				$('.skills-list .bar > span').css('width','0px');
 				$('.skills-list .bar > span').animate({
-					width: 100%
+					width: 900
 				});
 			}
 		}
