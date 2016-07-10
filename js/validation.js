@@ -1,6 +1,7 @@
 function helperValidity(input, event) {
 	if (input != null) {
 		input.focus();
+		input.style.borderColor = "red";
 		event.preventDefault();
 	}
 	else {
@@ -85,7 +86,7 @@ function errorSubmit(message, blockError, textError) {
 			}
 			if (inputHowKnow[0].checkValidity() === false) {
 				errorSubmit('Please choose one option', errorBlock, errorText);
-				helperValidity(null, ev);
+				helperValidity(inputHowKnow[0], ev);
 				return false;
 			}
 			if (inputHowKnow[3].checked === true) {
@@ -120,7 +121,7 @@ function errorSubmit(message, blockError, textError) {
 			}
 			if (temporaryVaribleIE == 0) {
 				errorSubmit('Please choose one option', errorBlock, errorText);
-				helperValidity(null, ev);
+				helperValidity(inputHowKnow[0], ev);
 				return false;
 			}
 		}
@@ -131,23 +132,29 @@ function errorSubmit(message, blockError, textError) {
 			return false;
 		}
 	});
-	inputEmail.addEventListener('keyup', function (ev) {
+	inputEmail.addEventListener('keydown', function (ev) {
 		if(!regExpEmail.test(this.value)) {
 			errorBlock.style.display = 'block';
 			errorText.innerHTML = 'Set up a correct format email';
+			this.style.borderColor = "red";
 		}
 		else {
 			errorBlock.style.display = 'none';
+			this.style.borderColor = '#212121';
 		}
 	});
 	inputPhone.addEventListener('keyup', function (ev) {
 		if(!regExpPhone.test(this.value)) {
 			errorBlock.style.display = 'block';
 			errorText.innerHTML = 'Set up a correct format phone';
+			this.style.borderColor = "red";
 		}
 		else {
+			this.style.borderColor = '#212121';
 			errorBlock.style.display = 'none';
 		}
 	});
-
+	inputName.addEventListener('keydown', function (ev) {
+		this.style.borderColor = '#212121';
+	});
 })($)
