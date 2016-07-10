@@ -48,7 +48,6 @@ table {
 	border-spacing: 0;
 }
 
-
 * {
     box-sizing: border-box;
 }
@@ -118,7 +117,6 @@ table {
 	margin: 5px 0px;
 }
 
-
 .button-container {
     position: relative;
     text-align: left;
@@ -175,35 +173,44 @@ table {
 	background-color: #000;
 	background-color: rgba(0,0,0,0.4);
 }
+.modal .section-titles {
+	margin: 15px 0;
+}
 .modal-content {
 	background-color: #fefefe;
 	margin: auto;
 	padding: 20px;
 	border: 1px solid #888;
-	width: 80%;
+	width: 600px;
+	text-align: center;
 }
 .close {
 	color: #AAA;
 	float: right;
 	font-size: 28px;
+	margin-top: -5px;
 	font-weight: bold;
 }
 .close:hover,
 .close:focus {
-	color: #000;
+	color: #8bc34a;
 	text-decoration: none;
 	cursor: pointer;
 }
 .modal video {
-	width: 100%;
+	width: auto;
 	height: 300px;
 	max-height: 300px;
+}
+
+.fade-in {
+	animation: fadeIn 1.5s forwards;
 }
 
 @keyframes increaseProgressBar {
 	0% {
 		width: 0%;
-		opacity: 0;
+		opacity: 0.8;
 	}
 	50%{
 		width: 50%
@@ -257,10 +264,13 @@ table {
 .navbar .navbar-list .navbar-item a {
 	display: inline-block;
 	text-decoration: none;
-	padding: 20px;
+	padding: 20px 15px;
 	color: #9E9E9E;
 	font-size: 1.2rem;
 	transition: color .2s linear;
+}
+.navbar .navbar-list .navbar-item.active a {
+	color: #8bc34a;
 }
 .navbar .navbar-list .navbar-item a:hover {
 	color: #8bc34a;
@@ -275,6 +285,9 @@ table {
 }
 .about-me .img-container img {
 	border-radius: 50%;
+}
+.about-me p {
+	padding: 5px 0;
 }
 
 .about-me h2 {
@@ -336,16 +349,19 @@ table {
     -moz-border-radius-bottomleft: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    background-color: #FFF;
+    background-color: #8BC34A;
     background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, #8BC34A), color-stop(1, #8bc34a) );
-    background-image: -moz-linear-gradient( center bottom, #FFF 37%, #FFF 69% );
+    background-image: -moz-linear-gradient( center bottom, #8BC34A 37%, #8BC34A 69% );
     -webkit-box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4);
     -moz-box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4);
     box-shadow: inset 0 2px 9px rgba(255,255,255,0.3), inset 0 -2px 6px rgba(0,0,0,0.4);
     position: relative;
     overflow: hidden;
 }
-.skills-list .bar > span.animate {
+.no-cssgradients .skills-list .bar > span {
+    background-color: #8BC34A;
+}
+.cssanimations .skills-list .bar > span.animate {
 	animation: increaseProgressBar 3s forwards;
 }
 .skills-list .bar > span:after {
@@ -416,7 +432,6 @@ table {
 	height: auto;
 	max-height: 300px;
 }
-
 .flex-container {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -434,8 +449,11 @@ table {
 	max-height: 300px;
 	overflow: hidden;
 }
-.box:hover .box-overlay {
+.cssanimations .box:hover .box-overlay {
 	animation: upTextHobbie .5s forwards;
+}
+.no-cssanimations .box:hover .box-overlay {
+	opacity: 1;
 }
 .box-overlay {
 	position: absolute;
@@ -461,8 +479,34 @@ table {
 	height: 300px;
 	opacity: 0;
 }
+.explorer-inside-box {
+	text-align: center;
+}
 .box-overlay i {
 	cursor: pointer;
+}
+
+.no-flexbox .flex-container {
+	display: block;
+	text-align: center;
+}
+.no-flexbox .box {
+	display: inline-table;
+}
+.no-flexbox .box-overlay {
+	position: absolute;
+	color: #F5F5F5;
+	top: 0px;
+	width: 100%;
+	background-color: rgba(33, 33, 33, 0.81);
+	height: 300px;
+	opacity: 0;
+}
+.no-flexbox .explorer-inside-box {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 35%;
 }
 
 
@@ -491,10 +535,12 @@ table {
 }
 .form-control textarea {
 	width: 100%;
+	height: 80px;
 }
 .form .form-control input[type=text],
 .form .form-control input[type=email],
 .form .form-control input[type=tel],
+.form .form-control input[type=number],
 .form .form-control textarea {
 	padding: 4px;
 	border-radius: 4px;
@@ -506,11 +552,22 @@ table {
 .form .form-control input[type=text]:focus,
 .form .form-control input[type=email]:focus,
 .form .form-control input[type=tel]:focus,
+.form .form-control input[type=number]:focus,
 .form .form-control textarea:focus {
 	outline: none;
 }
 #other_text {
 	display: none;
+}
+#error-message.block-content {
+	display: none;
+	width: 50%;
+}
+.text-error {
+	border:1px solid rgba(251, 43, 43, 0.84);
+	color: rgba(251, 43, 43, 0.84);
+    border-radius: 5px;
+    padding: 5px;
 }
 
 
@@ -540,6 +597,14 @@ table {
 	padding: 5px;
 }
 
+/*
+main-text-color: #212121;
+secondary-text-color:#727272;
+icons-color:#212121;
+light-primary-color:#F5F5F5;
+rgba(0,0,0,0.5)
+accent-color:#8bc34a;
+*/
 body {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
@@ -548,7 +613,13 @@ body {
 section[id] {
 	margin-top: 50px;
 	margin-bottom: 50px;
+	opacity: 0;
 }
+/*.no-cssanimations section[id] {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	opacity: 1 !important;
+}*/
 p {
 	font-size: 1rem;
 	line-height: 1.4;

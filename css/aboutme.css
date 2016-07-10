@@ -8,7 +8,9 @@
 .about-me .img-container img {
 	border-radius: 50%;
 }
-
+.about-me p {
+	padding: 5px 0;
+}
 .about-me h2 {
 	text-align: left;
 	margin-bottom: 10px;
