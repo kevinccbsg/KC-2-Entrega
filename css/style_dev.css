@@ -30,6 +30,11 @@ section[id] {
 	margin-bottom: 50px;
 	opacity: 0;
 }
+/*.no-cssanimations section[id] {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	opacity: 1 !important;
+}*/
 p {
 	font-size: 1rem;
 	line-height: 1.4;

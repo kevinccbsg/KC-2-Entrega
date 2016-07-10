@@ -18,12 +18,6 @@ function errorSubmit(message, blockError, textError) {
 	}, 3000);
 }
 (function () {
-	/*if (Modernizr.formvalidation) {
-		// supported
-	} 
-	else {
-		// not-supported
-	}*/
 
 	var inputName = document.getElementById('contact-name'),
 	inputHowKnow = document.getElementsByName('how_know'),
@@ -41,11 +35,16 @@ function errorSubmit(message, blockError, textError) {
 
 	for (var i = 0, howKnowLength = inputHowKnow.length; i < howKnowLength; i++) {
 		inputHowKnow[i].addEventListener('click', function (ev) {
-			if (this.value === "other") {
-				inputOther.style.display = 'inline-table';
-			}
+			if (Modernizr.formvalidation) {
+				if (this.value === "other") {
+					inputOther.style.display = 'inline-table';
+				}
+				else {
+					inputOther.style.display = 'none';
+				}
+			} 
 			else {
-				inputOther.style.display = 'none';
+				inputOther.style.display = 'inline-table';
 			}
 		});
 	}
@@ -53,46 +52,75 @@ function errorSubmit(message, blockError, textError) {
 	formContact.addEventListener('submit', function (ev) {
 		var textAreaText = inputMessage.value;
 		var numberCaracters = textAreaText.split(" ");
-		console.log(textAreaText);
-		console.log(numberCaracters);
-		if (inputName.checkValidity() === false) {
-			errorSubmit('Complete name field', errorBlock, errorText);
-			helperValidity(inputName, ev);
-			return false;
-		}
-		if (inputEmail.checkValidity() === false) {
-			if(inputEmail.validity.typeMismatch === true || inputEmail.validity.patternMismatch == true) {
+		var temporaryVaribleIE = 0;
+		if (Modernizr.formvalidation) {
+			if (inputName.checkValidity() === false) {
+				errorSubmit('Complete name field', errorBlock, errorText);
+				helperValidity(inputName, ev);
+				return false;
+			}
+			if (inputEmail.checkValidity() === false) {
+				if(inputEmail.validity.typeMismatch === true || inputEmail.validity.patternMismatch == true) {
+					errorSubmit('Set up a correct format email', errorBlock, errorText);
+					helperValidity(inputEmail, ev);
+					return false;
+				}
+				else {
+					errorSubmit('Complete email field', errorBlock, errorText);
+					helperValidity(inputEmail, ev);
+					return false;
+				}
+			}
+			if (inputPhone.checkValidity() === false) {
+				if (inputPhone.validity.patternMismatch == true) {
+					errorSubmit('Set up a correct format phone', errorBlock, errorText);
+					helperValidity(inputPhone, ev);
+					return false;
+				}
+				else {
+					errorSubmit('Complete phone field', errorBlock, errorText);
+					helperValidity(inputPhone, ev);
+					return false;
+				}
+			}
+			if (inputHowKnow[0].checkValidity() === false) {
+				errorSubmit('Please choose one option', errorBlock, errorText);
+				helperValidity(null, ev);
+				return false;
+			}
+			if (inputHowKnow[3].checked === true) {
+				if (inputOther.checkValidity() === false) {
+					errorSubmit('Please write how', errorBlock, errorText);
+					helperValidity(inputOther, ev);
+					return false;
+				}
+			}
+		} 
+		else {
+			for (var i = 0, howKnowLength = inputHowKnow.length; i < howKnowLength; i++) {
+				if(inputHowKnow[i].checked == true) {
+					temporaryVaribleIE++;
+				}
+			}
+			if (inputName.value.length == 0) {
+				console.log('validaaa');
+				errorSubmit('Complete name field', errorBlock, errorText);
+				helperValidity(inputName, ev);
+				return false;
+			}
+			if(!regExpEmail.test(inputEmail.value)) {
 				errorSubmit('Set up a correct format email', errorBlock, errorText);
 				helperValidity(inputEmail, ev);
 				return false;
 			}
-			else {
-				errorSubmit('Complete email field', errorBlock, errorText);
-				helperValidity(inputEmail, ev);
-				return false;
-			}
-		}
-		if (inputPhone.checkValidity() === false) {
-			if (inputPhone.validity.patternMismatch == true) {
+			if(!regExpPhone.test(inputPhone.value)) {
 				errorSubmit('Set up a correct format phone', errorBlock, errorText);
 				helperValidity(inputPhone, ev);
 				return false;
 			}
-			else {
-				errorSubmit('Complete phone field', errorBlock, errorText);
-				helperValidity(inputPhone, ev);
-				return false;
-			}
-		}
-		if (inputHowKnow[0].checkValidity() === false) {
-			errorSubmit('Please choose one option', errorBlock, errorText);
-			helperValidity(null, ev);
-			return false;
-		}
-		if (inputHowKnow[3].checked === true) {
-			if (inputOther.checkValidity() === false) {
-				errorSubmit('Please write how', errorBlock, errorText);
-				helperValidity(inputOther, ev);
+			if (temporaryVaribleIE == 0) {
+				errorSubmit('Please choose one option', errorBlock, errorText);
+				helperValidity(null, ev);
 				return false;
 			}
 		}
@@ -105,6 +133,15 @@ function errorSubmit(message, blockError, textError) {
 	});
 	inputEmail.addEventListener('keyup', function (ev) {
 		if(!regExpEmail.test(this.value)) {
+			errorBlock.style.display = 'block';
+			errorText.innerHTML = 'Set up a correct format email';
+		}
+		else {
+			errorBlock.style.display = 'none';
+		}
+	});
+	inputPhone.addEventListener('keyup', function (ev) {
+		if(!regExpPhone.test(this.value)) {
 			errorBlock.style.display = 'block';
 			errorText.innerHTML = 'Set up a correct format phone';
 		}

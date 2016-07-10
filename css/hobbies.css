@@ -4,7 +4,6 @@
 	height: auto;
 	max-height: 300px;
 }
-
 .flex-container {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -22,8 +21,11 @@
 	max-height: 300px;
 	overflow: hidden;
 }
-.box:hover .box-overlay {
+.cssanimations .box:hover .box-overlay {
 	animation: upTextHobbie .5s forwards;
+}
+.no-cssanimations .box:hover .box-overlay {
+	opacity: 1;
 }
 .box-overlay {
 	position: absolute;
@@ -49,6 +51,32 @@
 	height: 300px;
 	opacity: 0;
 }
+.explorer-inside-box {
+	text-align: center;
+}
 .box-overlay i {
 	cursor: pointer;
+}
+
+.no-flexbox .flex-container {
+	display: block;
+	text-align: center;
+}
+.no-flexbox .box {
+	display: inline-table;
+}
+.no-flexbox .box-overlay {
+	position: absolute;
+	color: #F5F5F5;
+	top: 0px;
+	width: 100%;
+	background-color: rgba(33, 33, 33, 0.81);
+	height: 300px;
+	opacity: 0;
+}
+.no-flexbox .explorer-inside-box {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 35%;
 }

@@ -32,7 +32,10 @@
     position: relative;
     overflow: hidden;
 }
-.skills-list .bar > span.animate {
+.no-cssgradients .skills-list .bar > span {
+    background-color: #8BC34A;
+}
+.cssanimations .skills-list .bar > span.animate {
 	animation: increaseProgressBar 3s forwards;
 }
 .skills-list .bar > span:after {

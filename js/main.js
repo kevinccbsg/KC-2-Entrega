@@ -23,6 +23,16 @@ function initialCompare (offset, about, navbar) {
 		});
 	}
 }
+function modernizAnimation(section) {
+	if (Modernizr.cssanimations) {
+		section.addClass('fade-in');
+	}
+	else {
+		section.animate({
+			opacity: 1
+		});
+	}
+}
 (function () {
 	var a = $('.navbar-list .navbar-item'),
 	sectionAboutMe = $('#about'), 
@@ -61,7 +71,7 @@ function initialCompare (offset, about, navbar) {
 			});
 			setDisabledNavbarItem(a);
 			a[0].className += ' active';
-			sectionAboutMe.addClass('fade-in');
+			modernizAnimation(sectionAboutMe);
 		}
 		else if (scrollToCompare <= sectionStudies.offset().top) {
 			navbar.css({
@@ -73,28 +83,35 @@ function initialCompare (offset, about, navbar) {
 			});
 			setDisabledNavbarItem(a);
 			a[1].className += ' active';
-			sectionStudies.addClass('fade-in');
+			modernizAnimation(sectionStudies);
 		}
 		else if (scrollToCompare <= sectionSkills.offset().top) {
 			setDisabledNavbarItem(a);
 			a[2].className += ' active';
-			sectionSkills.addClass('fade-in');
-			barStatus.addClass('animate');
+			modernizAnimation(sectionSkills);
+			if (Modernizr.cssanimations) {
+				barStatus.addClass('animate');
+			}
+			else {
+				$('.skills-list .bar > span').animate({
+					width: 100%
+				});
+			}
 		}
 		else if (scrollToCompare <= sectionExperience.offset().top) {
 			setDisabledNavbarItem(a);
 			a[3].className += ' active';
-			sectionExperience.addClass('fade-in');
+			modernizAnimation(sectionExperience);
 		}
 		else if (scrollToCompare <= sectionHobbies.offset().top) {
 			setDisabledNavbarItem(a);
 			a[4].className += ' active';
-			sectionHobbies.addClass('fade-in');
+			modernizAnimation(sectionHobbies);
 		}
 		else if (scrollToCompare <= sectionContact.offset().top) {
 			setDisabledNavbarItem(a);
 			a[5].className += ' active';
-			sectionContact.addClass('fade-in');
+			modernizAnimation(sectionContact);
 		}
 		else {
 			setDisabledNavbarItem(a);
@@ -107,18 +124,14 @@ function initialCompare (offset, about, navbar) {
 			hobbieModalBasketball.css({
 				'display': 'block'
 			});
-			hobbieModalBasketball.find('video').attr({
-				'tric': '.mp4'
-			});
+			hobbieModalBasketball.find('video').get(0).play();
 			sectionTitleModal.text('My team Pumas Chamartin');
 		}
 		if (currentIdTarget === "music-hobbie") {
 			hobbieModalMusic.css({
 				'display': 'block'
 			});
-			hobbieModalMusic.find('video').attr({
-				'src-das': 'v.mp4'
-			});
+			hobbieModalMusic.find('video').get(0).play();
 			sectionTitleModal.text('Playing with my band Go The Distance');
 		}
 	});
@@ -126,9 +139,11 @@ function initialCompare (offset, about, navbar) {
 		hobbieModalBasketball.css({
 			'display': 'none'
 		});
+		hobbieModalBasketball.find('video').get(0).pause();
 		hobbieModalMusic.css({
 			'display': 'none'
 		});
+		hobbieModalMusic.find('video').get(0).pause();
 	});
 	$(document).keyup(function (ev) {
 		if (hobbieModalBasketball.css('display') === 'block' || hobbieModalMusic.css('display')){
