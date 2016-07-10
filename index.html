@@ -40,7 +40,7 @@
 					<li class="navbar-item">
 						<a href="#studies">Studies</a>
 					</li>
-					<li>
+					<li class="navbar-item">
 						<a href="#skills">Skills</a>
 					</li>
 					<li class="navbar-item">
@@ -265,7 +265,7 @@
 					<div class="box-overlay">
 						<h4 class="box-title">Play Music</h4>
 						<p>My favorite Hobbie is play with my band Go The Distance.</p>
-						<i class="material-icons">&#xE038;</i>
+						<i id="music-hobbie" class="material-icons">&#xE038;</i>
 					</div>
 				</div>
 				<div class="box">
@@ -273,7 +273,7 @@
 					<div class="box-overlay">
 						<h4 class="box-title">Basketball</h4>
 						<p>I'm trainer of two Basketbal teams.</p>
-						<i class="material-icons">&#xE038;</i>
+						<i id="basketball-hobbie" class="material-icons">&#xE038;</i>
 					</div>
 				</div>
 			</div>
@@ -345,24 +345,24 @@
 		</div>
 	</footer>
 
-	<div id="music-modal" class="modal">
+	<div id="hobbie-modal-music" class="modal">
 		<div class="modal-content">
 			<span class="close">X</span>
-			<h2 class="section-titles">Playing with my band Go The Distance</h2>
+			<h2 class="section-titles"></h2>
 			<div class="modal-video">
 				<video controls>
-					<source src="videos/batman-lego.mp4" type="video/mp4">
+					<source id="source-video" src="videos/gtd_live.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>
 	</div>
-	<div id="basket-modal" class="modal">
+	<div id="hobbie-modal-basketball" class="modal">
 		<div class="modal-content">
 			<span class="close">X</span>
-			<h2 class="section-titles">Playing with my band Go The Distance</h2>
+			<h2 class="section-titles"></h2>
 			<div class="modal-video">
 				<video controls>
-					<source src="videos/batman-lego.mp4" type="video/mp4">
+					<source id="source-video" src="videos/basketpumas.mp4" type="video/mp4">
 				</video>
 			</div>
 		</div>

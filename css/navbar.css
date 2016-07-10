@@ -23,7 +23,7 @@
 .navbar .navbar-list .navbar-item a {
 	display: inline-block;
 	text-decoration: none;
-	padding: 20px;
+	padding: 20px 15px;
 	color: #9E9E9E;
 	font-size: 1.2rem;
 	transition: color .2s linear;

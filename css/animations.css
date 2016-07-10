@@ -1,7 +1,11 @@
+.fade-in {
+	animation: fadeIn 1.5s forwards;
+}
+
 @keyframes increaseProgressBar {
 	0% {
 		width: 0%;
-		opacity: 0;
+		opacity: 0.8;
 	}
 	50%{
 		width: 50%
